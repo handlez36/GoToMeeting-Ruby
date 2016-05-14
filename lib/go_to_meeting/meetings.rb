@@ -6,7 +6,9 @@ module GoToMeeting
     end
     
     def create_meeting(params)
-      self.class.post("meetings", :body => params.to_json, :format => "HTML") 
+      resp = self.class.post("meetings", :body => params.to_json, :format => "HTML") 
+      puts "resp"
+      resp
     end
     
     def update_meeting(meeting_key, params)
