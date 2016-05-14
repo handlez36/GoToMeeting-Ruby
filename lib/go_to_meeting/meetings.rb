@@ -7,7 +7,7 @@ module GoToMeeting
     
     def create_meeting(params)
       resp = self.class.post("meetings", :body => params.to_json, :format => "HTML") 
-      puts "resp"
+      puts "Response from create_meeting: #{resp}"
       resp
     end
     
